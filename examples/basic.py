@@ -1,6 +1,5 @@
-from uuid_manager import UUIDManager
+from utils.uuid_manager import UUIDManager
 
-# Exemplo de uso:
 if __name__ == "__main__":
     my_uuid = UUIDManager.generate_uuid()
     print("Generated UUID:", my_uuid)
