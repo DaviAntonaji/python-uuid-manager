@@ -54,3 +54,19 @@ Retorna a versão do UUID (1 para UUID baseado em tempo, 4 para UUID aleatório)
 
 Retorna a variante do UUID (uma das constantes: RESERVED_NCS, RFC_4122, RESERVED_MICROSOFT ou RESERVED_FUTURE).
 
+
+## ❓ Qual a melhor forma de armazenar um UUID?
+
+Ao armazenar UUIDs no MySQL como chave primária, você tem duas opções de tipo de dados:
+
+1. `BINARY(16)`: Armazenar o UUID como um valor binário de 16 bytes é mais eficiente em termos de espaço de armazenamento e pode resultar em melhor desempenho em consultas e índices.
+
+2. `CHAR(36)`: Armazenar o UUID como uma string com 36 caracteres (incluindo hifens) é mais legível e fácil de depurar, mas requer mais espaço de armazenamento em comparação com `BINARY(16)`.
+
+Escolha o tipo de dado que melhor se adapta às necessidades do seu aplicativo, considerando a prioridade entre economia de espaço e legibilidade dos UUIDs no banco de dados.
+
+Independentemente do tipo de dados escolhido, os UUIDs são excelentes para garantir identificadores exclusivos em ambientes distribuídos ou onde a geração centralizada de IDs não é viável.
+
+## 📄 Licença
+
+Este projeto é licenciado sob a Licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter mais detalhes.
